@@ -94,7 +94,7 @@ jobs:
           containerRegistry: 'gcrServiceConnection'
           repository: 'prod-bip/ssb/dapla/rawdata-converter-app-altinn3'
           command: 'buildAndPush'
-          tags: '$(IMAGE_TAG)
+          tags: '$(IMAGE_TAG)'
 
   - job: promoteToProduction
     displayName: 'Tag production image'
