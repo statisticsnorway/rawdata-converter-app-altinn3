@@ -1,0 +1,17 @@
+micronaut:
+  application.name: rawdata-converter-app-altinn3
+  server:
+    port: 18080
+
+services:
+  dapla-oauth:
+    token-provider: mock
+  dapla-data-access:
+    host: localhost
+    port: 10138
+  dapla-metadata-distributor:
+    host: localhost
+    port: 10168
+    project-id: local-dev
+    topic: metadata-distributor-dataset-updates
+

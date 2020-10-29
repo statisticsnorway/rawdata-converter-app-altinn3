@@ -1,0 +1,86 @@
+micronaut:
+  application.name: rawdata-converter-app-altinn3
+  server:
+    port: 28082
+
+logger.levels:
+  no.ssb.rawdata.converter: DEBUG
+
+endpoints:
+  all:
+    sensitive: false
+  prometheus:
+    sensitive: false
+
+services:
+  dapla-oauth:
+    token-provider: mock
+  dapla-data-access:
+    host: data-access.dapla.svc.cluster.local
+    port: 10138
+  dapla-metadata-distributor:
+    host: metadata-distributor.dapla.svc.cluster.local
+    port: 10168
+    project-id: prod-bip
+    topic: metadata-distributor-dataset-updates
+
+pseudo-secrets:
+  secret1:
+    content: C5sn7B4YtwcilAwuVx6NuAsMWLusOSA/ldia40ZugDI=
+    type: AES256
+
+rawdata.sources:
+  fs-altinn3:
+    encryption:
+      key: SECURE_KMS_TOKEN
+      salt: SALT
+    rawdata-client:
+      provider: filesystem
+      local-temp-folder: temp
+      avro-file:
+        max.seconds: 3600
+        max.bytes: 10485760
+        sync.interval: 500000
+      filesystem:
+        storage-folder: ../localenv/rawdata/ssb-rawdata-dev-altinn3
+      listing:
+        min-interval-seconds: 0
+
+rawdata.converter:
+  job-scheduler:
+    max-concurrent-jobs: 10
+  jobs:
+    base:
+      prototype: true
+      debug:
+        dryrun: false
+        development-mode: true
+        log-rawdata-content-allowed: true
+        store-failed-messages: true
+        failed-messages-storage-path: /tmp/failed-messages
+      converter-settings:
+        rawdata-samples: 1
+        max-records-before-flush: 1000000
+        max-seconds-before-flush: 300
+      target-storage:
+        type: filesystem
+        root: file://../localenv/datastore
+      target-dataset:
+        valuation: INTERNAL
+        type: BOUNDED
+        publish-metadata: false
+
+    job-blah:
+      parent: base
+      active-by-default: true
+      rawdata-source:
+        name: fs-altinn3
+        topic: altinn3-test
+        initial-position: FIRST
+      target-storage:
+        path: /kilde/altinn3/raadata/20201027
+        version: 1598553650000
+      pseudo-rules:
+        - name: navn
+          pattern: '**/{navn}'
+          func: fpe-anychar(secret1)
