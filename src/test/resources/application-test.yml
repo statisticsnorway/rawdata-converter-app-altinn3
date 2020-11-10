@@ -7,11 +7,7 @@ services:
   dapla-oauth:
     token-provider: mock
   dapla-data-access:
-    host: localhost
-    port: 10138
+    impl: MOCK
   dapla-metadata-distributor:
-    host: localhost
-    port: 10168
-    project-id: local-dev
-    topic: metadata-distributor-dataset-updates
+    impl: MOCK
 
