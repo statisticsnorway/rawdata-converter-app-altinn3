@@ -1,423 +1,695 @@
 {
-  "type" : "record",
-  "name" : "RA_0678_M",
-  "fields" : [ {
-    "name" : "InternInformasjon",
-    "type" : {
-      "type" : "record",
-      "name" : "InternInformasjon",
-      "fields" : [ {
-        "name" : "periodeFritekst",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element periodeFritekst"
-      }, {
-        "name" : "rapportPeriode",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Tidsrom",
-          "fields" : [ {
-            "name" : "fomDato",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element fomDato"
-          }, {
-            "name" : "tomDato",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element tomDato"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element rapportPeriode"
-      }, {
-        "name" : "raNummer",
-        "type" : "string",
-        "source" : "element raNummer"
-      }, {
-        "name" : "delRegNummer",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element delRegNummer"
-      }, {
-        "name" : "identnummerEnhet",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element identnummerEnhet"
-      }, {
-        "name" : "sendtFraSluttbrukersystem",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element sendtFraSluttbrukersystem"
-      }, {
-        "name" : "statistiskEnhet",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "StatistiskEnhet",
-          "fields" : [ {
-            "name" : "enhetsident",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element enhetsident"
-          }, {
-            "name" : "enhetstype",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element enhetstype"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element statistiskEnhet"
-      }, {
-        "name" : "skjemaidentifikasjon",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Skjemaidentifikasjon",
-          "fields" : [ {
-            "name" : "periodenummer",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element periodenummer"
-          }, {
-            "name" : "periodetype",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element periodetype"
-          }, {
-            "name" : "periodeAAr",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element periodeAAr"
-          }, {
-            "name" : "undersoekelsesnummer",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element undersoekelsesnummer"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element skjemaidentifikasjon"
-      } ]
-    },
-    "source" : "element InternInformasjon"
-  }, {
-    "name" : "KontaktpersonOgKommentarfelt",
-    "type" : {
-      "type" : "record",
-      "name" : "KontaktpersonOgKommentarfelt",
-      "fields" : [ {
-        "name" : "kommentar",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element kommentar"
-      }, {
-        "name" : "kontaktperson",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Kontaktperson",
-          "fields" : [ {
-            "name" : "epostadresse",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element epostadresse"
-          }, {
-            "name" : "navn",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element navn"
-          }, {
-            "name" : "telefonSFU",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element telefonSFU"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element kontaktperson"
-      } ]
-    },
-    "source" : "element KontaktpersonOgKommentarfelt"
-  }, {
-    "name" : "ForetakOgVirksomhetsopplysninger",
-    "type" : {
-      "type" : "record",
-      "name" : "ForetakOgVirksomhetsopplysninger",
-      "fields" : [ {
-        "name" : "organisasjonsnummerKontekst",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element organisasjonsnummerKontekst"
-      }, {
-        "name" : "foretak",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Foretak",
-          "fields" : [ {
-            "name" : "organisasjonsnummerForetak",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element organisasjonsnummerForetak"
-          }, {
-            "name" : "navnForetak",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element navnForetak"
-          }, {
-            "name" : "adresseForetak",
-            "type" : [ "null", {
-              "type" : "record",
-              "name" : "Besoeksadresse",
-              "fields" : [ {
-                "name" : "gateadresse",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element gateadresse"
-              }, {
-                "name" : "postnummer",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element postnummer"
-              }, {
-                "name" : "poststed",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element poststed"
-              } ]
-            } ],
-            "default" : null,
-            "source" : "element adresseForetak"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element foretak"
-      }, {
-        "name" : "virksomhet",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Virksomhet",
-          "fields" : [ {
-            "name" : "organisasjonsnummerVirksomhet",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element organisasjonsnummerVirksomhet"
-          }, {
-            "name" : "navnVirksomhet",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element navnVirksomhet"
-          }, {
-            "name" : "adresseVirksomhet",
-            "type" : [ "null", "Besoeksadresse" ],
-            "default" : null,
-            "source" : "element adresseVirksomhet"
-          }, {
-            "name" : "avdeling",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element avdeling"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element virksomhet"
-      } ]
-    },
-    "source" : "element ForetakOgVirksomhetsopplysninger"
-  }, {
-    "name" : "StatusVirksomhetMedDriftsperiode",
-    "type" : {
-      "type" : "record",
-      "name" : "StatusVirksomhetMedDriftsperiode",
-      "fields" : [ {
-        "name" : "driftsstatusPeriode",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element driftsstatusPeriode"
-      } ]
-    },
-    "source" : "element StatusVirksomhetMedDriftsperiode"
-  }, {
-    "name" : "Naeringskontrollspoersmaal",
-    "default" : null,
-    "type" : {
-      "type" : "record",
-      "name" : "Naeringskontrollspoersmaal",
-      "fields" : [ {
-        "name" : "visNaeringskontrollJaNeiPrefill",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element visNaeringskontrollJaNeiPrefill"
-      }, {
-        "name" : "Naeringskontroll",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Naeringskontroll",
-          "fields" : [ {
-            "name" : "naeringOk",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element naeringOk"
-          }, {
-            "name" : "naeringskode",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element naeringskode"
-          }, {
-            "name" : "naeringstekst",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element naeringstekst"
-          }, {
-            "name" : "naeringsbeskrivelse",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element naeringsbeskrivelse"
-          }, {
-            "name" : "nyNaeringsbeskrivelse",
-            "type" : [ "null", {
-              "type" : "record",
-              "name" : "NyNaeringsbeskrivelse",
-              "fields" : [ {
-                "name" : "nyNaeringTekst",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element nyNaeringTekst"
-              }, {
-                "name" : "alltidViktigsteAktivitet",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element alltidViktigsteAktivitet"
-              }, {
-                "name" : "datoNaeringsendring",
-                "type" : [ "null", "string" ],
-                "default" : null,
-                "source" : "element datoNaeringsendring"
-              } ]
-            } ],
-            "default" : null,
-            "source" : "element nyNaeringsbeskrivelse"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element Naeringskontroll"
-      } ]
-    },
-    "source" : "element Naeringskontrollspoersmaal"
-  }, {
-    "name" : "Oppgavebyrde",
-    "type" : {
-      "type" : "record",
+  "type": "record",
+  "name": "RA_0678_M",
+  "fields": [
+    {
+      "name": "InternInformasjon",
+      "type": {
+        "type": "record",
+        "name": "InternInformasjon",
+        "fields": [
+          {
+            "name": "periodeFritekst",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element periodeFritekst"
+          },
+          {
+            "name": "rapportPeriode",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Tidsrom",
+                "fields": [
+                  {
+                    "name": "fomDato",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element fomDato"
+                  },
+                  {
+                    "name": "tomDato",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element tomDato"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element rapportPeriode"
+          },
+          {
+            "name": "raNummer",
+            "type": "string",
+            "source": "element raNummer"
+          },
+          {
+            "name": "delRegNummer",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element delRegNummer"
+          },
+          {
+            "name": "identnummerEnhet",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element identnummerEnhet"
+          },
+          {
+            "name": "sendtFraSluttbrukersystem",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element sendtFraSluttbrukersystem"
+          },
+          {
+            "name": "statistiskEnhet",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "StatistiskEnhet",
+                "fields": [
+                  {
+                    "name": "enhetsident",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element enhetsident"
+                  },
+                  {
+                    "name": "enhetstype",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element enhetstype"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element statistiskEnhet"
+          },
+          {
+            "name": "skjemaidentifikasjon",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Skjemaidentifikasjon",
+                "fields": [
+                  {
+                    "name": "periodenummer",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element periodenummer"
+                  },
+                  {
+                    "name": "periodetype",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element periodetype"
+                  },
+                  {
+                    "name": "periodeAAr",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element periodeAAr"
+                  },
+                  {
+                    "name": "undersoekelsesnummer",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element undersoekelsesnummer"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element skjemaidentifikasjon"
+          }
+        ]
+      },
       "default": null,
-      "name" : "Oppgavebyrde",
-      "fields" : [ {
-        "name" : "visOppgavebyrdeJaNeiPrefill",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element visOppgavebyrdeJaNeiPrefill"
-      }, {
-        "name" : "antallPersonerHjelp",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element antallPersonerHjelp"
-      }, {
-        "name" : "fikkHjelpAvAndre",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element fikkHjelpAvAndre"
-      }, {
-        "name" : "harSamletInformasjon",
-        "type" : [ "null", "string" ],
-        "default" : null,
-        "source" : "element harSamletInformasjon"
-      }, {
-        "name" : "tidsbrukSamleInformasjon",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Tidsbruk",
-          "fields" : [ {
-            "name" : "AntallTimer",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element AntallTimer"
-          }, {
-            "name" : "AntallMinutter",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element AntallMinutter"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element tidsbrukSamleInformasjon"
-      }, {
-        "name" : "tidsbrukSelveSkjemautfyllingen",
-        "type" : [ "null", "Tidsbruk" ],
-        "default" : null,
-        "source" : "element tidsbrukSelveSkjemautfyllingen"
-      }, {
-        "name" : "tidsbrukTotalHjelpAvAndre",
-        "type" : [ "null", "Tidsbruk" ],
-        "default" : null,
-        "source" : "element tidsbrukTotalHjelpAvAndre"
-      } ]
+      "source": "element InternInformasjon"
     },
-    "source" : "element Oppgavebyrde"
-  }, {
-    "name" : "Skjemadata",
-    "type" : {
-      "type" : "record",
-      "name" : "Skjemadata",
-      "fields" : [ {
-        "name" : "Data",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Data",
-          "fields" : [ {
-            "name" : "LedigeStillinger",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element LedigeStillinger"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element Data"
-      }, {
-        "name" : "Prefilldata",
-        "type" : [ "null", {
-          "type" : "record",
-          "name" : "Prefilldata",
-          "fields" : [ {
-            "name" : "AntallAnsatte",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element AntallAnsatte"
-          }, {
-            "name" : "Dato",
-            "type" : [ "null", "string" ],
-            "default" : null,
-            "source" : "element Dato"
-          } ]
-        } ],
-        "default" : null,
-        "source" : "element Prefilldata"
-      } ]
+    {
+      "name": "KontaktpersonOgKommentarfelt",
+      "type": {
+        "type": "record",
+        "name": "KontaktpersonOgKommentarfelt",
+        "fields": [
+          {
+            "name": "kommentar",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element kommentar"
+          },
+          {
+            "name": "kontaktperson",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Kontaktperson",
+                "fields": [
+                  {
+                    "name": "epostadresse",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element epostadresse"
+                  },
+                  {
+                    "name": "navn",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element navn"
+                  },
+                  {
+                    "name": "telefonSFU",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element telefonSFU"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element kontaktperson"
+          }
+        ]
+      },
+      "default": null,
+      "source": "element KontaktpersonOgKommentarfelt"
     },
-    "source" : "element Skjemadata"
-  }, {
-    "name" : "_dataFormatProvider",
-    "type" : "string",
-    "source" : "attribute dataFormatProvider"
-  }, {
-    "name" : "_dataFormatId",
-    "type" : "string",
-    "source" : "attribute dataFormatId"
-  }, {
-    "name" : "_dataFormatVersion",
-    "type" : "string",
-    "source" : "attribute dataFormatVersion"
-  }, {
-    "name" : "others",
-    "type" : {
-      "type" : "map",
-      "values" : "string"
+    {
+      "name": "ForetakOgVirksomhetsopplysninger",
+      "type": {
+        "type": "record",
+        "name": "ForetakOgVirksomhetsopplysninger",
+        "fields": [
+          {
+            "name": "organisasjonsnummerKontekst",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element organisasjonsnummerKontekst"
+          },
+          {
+            "name": "foretak",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Foretak",
+                "fields": [
+                  {
+                    "name": "organisasjonsnummerForetak",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element organisasjonsnummerForetak"
+                  },
+                  {
+                    "name": "navnForetak",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element navnForetak"
+                  },
+                  {
+                    "name": "adresseForetak",
+                    "type": [
+                      "null",
+                      {
+                        "type": "record",
+                        "name": "Besoeksadresse",
+                        "fields": [
+                          {
+                            "name": "gateadresse",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element gateadresse"
+                          },
+                          {
+                            "name": "postnummer",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element postnummer"
+                          },
+                          {
+                            "name": "poststed",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element poststed"
+                          }
+                        ]
+                      }
+                    ],
+                    "default": null,
+                    "source": "element adresseForetak"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element foretak"
+          },
+          {
+            "name": "virksomhet",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Virksomhet",
+                "fields": [
+                  {
+                    "name": "organisasjonsnummerVirksomhet",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element organisasjonsnummerVirksomhet"
+                  },
+                  {
+                    "name": "navnVirksomhet",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element navnVirksomhet"
+                  },
+                  {
+                    "name": "adresseVirksomhet",
+                    "type": [
+                      "null",
+                      "Besoeksadresse"
+                    ],
+                    "default": null,
+                    "source": "element adresseVirksomhet"
+                  },
+                  {
+                    "name": "avdeling",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element avdeling"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element virksomhet"
+          }
+        ]
+      },
+      "source": "element ForetakOgVirksomhetsopplysninger"
+    },
+    {
+      "name": "StatusVirksomhetMedDriftsperiode",
+      "type": {
+        "type": "record",
+        "name": "StatusVirksomhetMedDriftsperiode",
+        "fields": [
+          {
+            "name": "driftsstatusPeriode",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element driftsstatusPeriode"
+          }
+        ]
+      },
+      "default": null,
+      "source": "element StatusVirksomhetMedDriftsperiode"
+    },
+    {
+      "name": "Naeringskontrollspoersmaal",
+      "default": null,
+      "type": {
+        "type": "record",
+        "name": "Naeringskontrollspoersmaal",
+        "fields": [
+          {
+            "name": "visNaeringskontrollJaNeiPrefill",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element visNaeringskontrollJaNeiPrefill"
+          },
+          {
+            "name": "Naeringskontroll",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Naeringskontroll",
+                "fields": [
+                  {
+                    "name": "naeringOk",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element naeringOk"
+                  },
+                  {
+                    "name": "naeringskode",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element naeringskode"
+                  },
+                  {
+                    "name": "naeringstekst",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element naeringstekst"
+                  },
+                  {
+                    "name": "naeringsbeskrivelse",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element naeringsbeskrivelse"
+                  },
+                  {
+                    "name": "nyNaeringsbeskrivelse",
+                    "type": [
+                      "null",
+                      {
+                        "type": "record",
+                        "name": "NyNaeringsbeskrivelse",
+                        "fields": [
+                          {
+                            "name": "nyNaeringTekst",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element nyNaeringTekst"
+                          },
+                          {
+                            "name": "alltidViktigsteAktivitet",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element alltidViktigsteAktivitet"
+                          },
+                          {
+                            "name": "datoNaeringsendring",
+                            "type": [
+                              "null",
+                              "string"
+                            ],
+                            "default": null,
+                            "source": "element datoNaeringsendring"
+                          }
+                        ]
+                      }
+                    ],
+                    "default": null,
+                    "source": "element nyNaeringsbeskrivelse"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element Naeringskontroll"
+          }
+        ]
+      },
+      "source": "element Naeringskontrollspoersmaal"
+    },
+    {
+      "name": "Oppgavebyrde",
+      "type": ["null", {
+        "type": "record",
+        "default": null,
+        "name": "Oppgavebyrde",
+        "fields": [
+          {
+            "name": "visOppgavebyrdeJaNeiPrefill",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element visOppgavebyrdeJaNeiPrefill"
+          },
+          {
+            "name": "antallPersonerHjelp",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element antallPersonerHjelp"
+          },
+          {
+            "name": "fikkHjelpAvAndre",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element fikkHjelpAvAndre"
+          },
+          {
+            "name": "harSamletInformasjon",
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null,
+            "source": "element harSamletInformasjon"
+          },
+          {
+            "name": "tidsbrukSamleInformasjon",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Tidsbruk",
+                "fields": [
+                  {
+                    "name": "AntallTimer",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element AntallTimer"
+                  },
+                  {
+                    "name": "AntallMinutter",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element AntallMinutter"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element tidsbrukSamleInformasjon"
+          },
+          {
+            "name": "tidsbrukSelveSkjemautfyllingen",
+            "type": [
+              "null",
+              "Tidsbruk"
+            ],
+            "default": null,
+            "source": "element tidsbrukSelveSkjemautfyllingen"
+          },
+          {
+            "name": "tidsbrukTotalHjelpAvAndre",
+            "type": [
+              "null",
+              "Tidsbruk"
+            ],
+            "default": null,
+            "source": "element tidsbrukTotalHjelpAvAndre"
+          }
+        ]
+      }],
+      "default": null,
+      "source": "element Oppgavebyrde"
+    },
+    {
+      "name": "Skjemadata",
+      "type": {
+        "type": "record",
+        "name": "Skjemadata",
+        "fields": [
+          {
+            "name": "Data",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Data",
+                "fields": [
+                  {
+                    "name": "LedigeStillinger",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element LedigeStillinger"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element Data"
+          },
+          {
+            "name": "Prefilldata",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Prefilldata",
+                "fields": [
+                  {
+                    "name": "AntallAnsatte",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element AntallAnsatte"
+                  },
+                  {
+                    "name": "Dato",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null,
+                    "source": "element Dato"
+                  }
+                ]
+              }
+            ],
+            "default": null,
+            "source": "element Prefilldata"
+          }
+        ]
+      },
+      "source": "element Skjemadata"
+    },
+    {
+      "name": "_dataFormatProvider",
+      "type": "string",
+      "default": "",
+      "source": "attribute dataFormatProvider"
+    },
+    {
+      "name": "_dataFormatId",
+      "type": "string",
+      "default": "",
+      "source": "attribute dataFormatId"
+    },
+    {
+      "name": "_dataFormatVersion",
+      "type": "string",
+      "default": "",
+      "source": "attribute dataFormatVersion"
+    },
+    {
+      "name": "others",
+      "type": {
+        "type": "map",
+        "values": "string"
+      },
+      "default": null
     }
-  } ]
+  ]
 }
