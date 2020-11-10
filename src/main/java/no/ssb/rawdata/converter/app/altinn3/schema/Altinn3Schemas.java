@@ -20,7 +20,7 @@ public class Altinn3Schemas {
           Altinn3SchemaAdapter.builder()
             .name(normalizedNameOf("RA-0678_M"))
             .schema(readAvroSchema("schema/ra-0678_m_v1.2_20150506.avsc"))
-            .rootXmlName("RA_0678_M") // TODO: Deduce this from the schema instead?
+            .rootXmlName("RA0678_M") // TODO: Deduce this from the schema instead?
             .build()
         )
         .stream().collect(Collectors.toMap(s ->
