@@ -1,0 +1,28 @@
+## list execution summary for all converter jobs
+GET {{rawdata_converter}}/jobs/execution-summary
+
+###
+
+## list configs for all converter jobs
+GET {{rawdata_converter}}/jobs/config
+
+###
+
+## Publish dataset metadata manually (if you for some reason need to update dataset meta)
+POST {{rawdata_converter}}/dataset-meta
+Content-Type: application/json
+
+{
+  "storageRoot": "gs://ssb-data-staging-kilde-default",
+  "storagePath": "/kilde/altinn/altinn3/test/rådata/20201030",
+  "storageVersion": "1604071012000",
+  "valuation": "INTERNAL",
+  "type": "BOUNDED",
+  "pseudoRules": []
+}
+
+###
+
+## get dataset-meta for a given converter job
+GET {{rawdata_converter}}/jobs/{{job_id}}/dataset-meta
+

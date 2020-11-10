@@ -1,0 +1,10 @@
+## Notify metadata-distributor manually
+POST {{metadata_distributor}}/rpc/MetadataDistributorService/dataChanged
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "projectId": "staging-bip",
+  "topicName": "metadata-distributor-dataset-updates",
+  "uri": "gs://ssb-data-staging-kilde-default/kilde/altinn/altinn3/test/rådata/20201030/1604071014000/.dataset-meta.json.sign"
+}

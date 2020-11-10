@@ -1,0 +1,31 @@
+## Start altinn3-test converter job
+POST {{rawdata_converter}}/jobs
+Content-Type: application/json
+
+{
+  "jobConfig": {
+    "parent": "base",
+    "activeByDefault": true,
+    "rawdataSource": {
+      "name": "altinn3",
+      "topic": "altinn3-test",
+      "initialPosition": "FIRST"
+    },
+    "targetDataset": {
+      "publishMetadata": true
+    },
+    "targetStorage": {
+      "path": "/kilde/altinn/altinn3/test/rådata/20201030",
+      "version": 1604071014000
+    },
+    "pseudoRules": [
+      {
+        "name": "navn på pseudoregel",
+        "pattern": "**/{OrgNo}",
+        "func": "fpe-digits(secret1)"
+      }
+    ]
+  },
+  "converterConfig": {
+  }
+}
