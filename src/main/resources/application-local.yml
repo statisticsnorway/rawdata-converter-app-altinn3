@@ -16,13 +16,9 @@ services:
   dapla-oauth:
     token-provider: mock
   dapla-data-access:
-    host: data-access.dapla.svc.cluster.local
-    port: 10138
+    impl: MOCK
   dapla-metadata-distributor:
-    host: metadata-distributor.dapla.svc.cluster.local
-    port: 10168
-    project-id: prod-bip
-    topic: metadata-distributor-dataset-updates
+    impl: MOCK
 
 pseudo-secrets:
   secret1:
@@ -68,7 +64,7 @@ rawdata.converter:
       target-dataset:
         valuation: INTERNAL
         type: BOUNDED
-        publish-metadata: false
+        publish-metadata: true
 
     job-blah:
       parent: base
