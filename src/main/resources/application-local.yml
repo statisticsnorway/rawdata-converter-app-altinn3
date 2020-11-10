@@ -16,9 +16,15 @@ services:
   dapla-oauth:
     token-provider: mock
   dapla-data-access:
-    impl: MOCK
+    impl: HTTP
+    host: http://localhost
+    port: 8888
   dapla-metadata-distributor:
-    impl: MOCK
+    impl: HTTP
+    host: http://localhost
+    port: 8888
+    project-id: staging-bip
+    topic: metadata-distributor-dataset-updates
 
 pseudo-secrets:
   secret1:
@@ -76,6 +82,8 @@ rawdata.converter:
       target-storage:
         path: /kilde/altinn3/raadata/20201027
         version: 1598553650000
+      target-dataset:
+        publish-metadata: false
       pseudo-rules:
         - name: navn
           pattern: '**/{navn}'
