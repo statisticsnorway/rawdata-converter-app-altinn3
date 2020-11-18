@@ -25,7 +25,7 @@ public class DefaultRawdataConverterFactory implements RawdataConverterFactory {
         Altinn3RawdataConverterConfig converterConfig = defaultRawdataConverterConfig;
         if (converterConfigJson != null) {
             try {
-                Json.toObject(Altinn3RawdataConverterConfig.class, converterConfigJson);
+                converterConfig = Json.toObject(Altinn3RawdataConverterConfig.class, converterConfigJson);
             }
             catch (Exception e) {
                 throw new RawdataConverterException("Invalid Altinn3RawdataConverterConfig params: " + converterConfigJson, e);
