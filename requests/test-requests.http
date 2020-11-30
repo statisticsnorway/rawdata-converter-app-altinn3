@@ -1,4 +1,4 @@
-## Start altinn3-test converter job
+## 2020-11-19-altinn-ra0678-test (ra0678m-seres-4664-38916)
 POST {{rawdata_converter}}/jobs
 Content-Type: application/json
 
@@ -7,25 +7,87 @@ Content-Type: application/json
     "parent": "base",
     "activeByDefault": true,
     "rawdataSource": {
-      "name": "altinn3",
-      "topic": "altinn3-test",
+      "topic": "2020-11-19-altinn-ra0678-test",
       "initialPosition": "FIRST"
     },
     "targetDataset": {
-      "publishMetadata": true
+      "publishMetadata": false
     },
     "targetStorage": {
-      "path": "/kilde/altinn/altinn3/test/rådata/20201030",
-      "version": 1604071014000
-    },
-    "pseudoRules": [
-      {
-        "name": "navn på pseudoregel",
-        "pattern": "**/{OrgNo}",
-        "func": "fpe-digits(secret1)"
-      }
-    ]
+      "path": "/kilde/altinn/3/test/ra0678m/4664/38916/20201119",
+      "version": 1604071011000
+    }
   },
   "converterConfig": {
+    "schemaProps": {
+      "dataType": "RA-0678_M",
+      "dataFormatProvider": "SERES",
+      "dataFormatId": "4664",
+      "dataFormatVersion": "38916"
+    }
+  }
+}
+
+###
+
+## 2020-11-19-altinn-ra0678-test (ra0678m-seres-4664-45918)
+POST {{rawdata_converter}}/jobs
+Content-Type: application/json
+
+{
+  "jobConfig": {
+    "parent": "base",
+    "activeByDefault": true,
+    "rawdataSource": {
+      "topic": "2020-11-19-altinn-ra0678-test",
+      "initialPosition": "FIRST"
+    },
+    "targetDataset": {
+      "publishMetadata": false
+    },
+    "targetStorage": {
+      "path": "/kilde/altinn/3/test/ra0678m/4664/45918/20201119",
+      "version": 1604071012000
+    }
+  },
+  "converterConfig": {
+    "schemaProps": {
+      "dataType": "RA-0678_M",
+      "dataFormatProvider": "SERES",
+      "dataFormatId": "4664",
+      "dataFormatVersion": "45918"
+    }
+  }
+}
+
+###
+
+## 2020-11-19-altinn-ra0800-test (ra0800-seres-3983-40674)
+POST {{rawdata_converter}}/jobs
+Content-Type: application/json
+
+{
+  "jobConfig": {
+    "parent": "base",
+    "activeByDefault": true,
+    "rawdataSource": {
+      "topic": "2020-11-19-altinn-ra0800-test",
+      "initialPosition": "FIRST"
+    },
+    "targetDataset": {
+      "publishMetadata": false
+    },
+    "targetStorage": {
+      "path": "/kilde/altinn/3/test/ra0800/3983/40674/20201119",
+      "version": 1604071013000
+    }
+  },
+  "converterConfig": {
+    "schemaProps": {
+      "dataType": "RA-0800",
+      "dataFormatProvider": "SERES",
+      "dataFormatId": "3983",
+      "dataFormatVersion": "40674"
+    }
   }
 }

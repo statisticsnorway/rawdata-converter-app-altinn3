@@ -16,15 +16,10 @@ services:
   dapla-oauth:
     token-provider: mock
   dapla-data-access:
-    impl: HTTP
-    host: http://localhost
-    port: 8888
+    impl: MOCK
   dapla-metadata-distributor:
-    impl: HTTP
+    impl: MOCK
     host: http://localhost
-    port: 8888
-    project-id: staging-bip
-    topic: metadata-distributor-dataset-updates
 
 pseudo-secrets:
   secret1:
@@ -32,7 +27,7 @@ pseudo-secrets:
     type: AES256
 
 rawdata.sources:
-  fs-altinn3:
+  altinn3:
     encryption:
       key: SECURE_KMS_TOKEN
       salt: SALT
@@ -57,9 +52,15 @@ rawdata.converter:
       debug:
         dryrun: false
         development-mode: true
-        log-rawdata-content-allowed: true
-        store-failed-messages: true
-        failed-messages-storage-path: /tmp/failed-messages
+        log-failed-rawdata: true
+        log-skipped-rawdata: true
+        log-all-rawdata: false
+        log-all-converted: false
+        store-failed-rawdata: true
+        store-skipped-rawdata: true
+        store-all-rawdata: true
+        store-all-converted: true
+        local-storage-path: ./tmp
       converter-settings:
         rawdata-samples: 1
         max-records-before-flush: 1000000
@@ -76,15 +77,11 @@ rawdata.converter:
       parent: base
       active-by-default: true
       rawdata-source:
-        name: fs-altinn3
+        name: altinn3
         topic: altinn3-test
         initial-position: FIRST
       target-storage:
-        path: /kilde/altinn3/raadata/20201027
+        path: /kilde/altinn/altinn3/raadata/20201027
         version: 1598553650000
       target-dataset:
         publish-metadata: false
-      pseudo-rules:
-        - name: navn
-          pattern: '**/{navn}'
-          func: fpe-anychar(secret1)

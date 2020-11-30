@@ -5,6 +5,7 @@
 /src/test/javascript/coverage/
 **/target/*
 *.private.env.json
+application-local-private.yml
 
 ######################
 # Node
