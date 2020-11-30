@@ -1,4 +1,4 @@
-## Triggering the converter
+## Starte en ny konverteringsjobb
 
 Følgende gir en kort beskrivelse av hvordan du kan starte en ny converter-jobb.
 
