@@ -16,3 +16,7 @@ release-dryrun                 Simulate a release in order to detect any issues
 release                        Release a new version. Update POMs and tag the new version in git
 run-local                      Run the app locally (without docker)
 ```
+
+## Triggering the converter
+
+This [page](requests/README.md) gives an overview of how you can trigger the converter.

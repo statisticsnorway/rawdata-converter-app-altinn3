@@ -11,11 +11,11 @@ Content-Type: application/json
       "initialPosition": "FIRST"
     },
     "targetDataset": {
-      "publishMetadata": false
+      "publishMetadata": true
     },
     "targetStorage": {
       "path": "/kilde/altinn/3/test/ra0678m/4664/38916/20201119",
-      "version": 1604071011000
+      "version": 1604071017000
     }
   },
   "converterConfig": {
@@ -43,11 +43,11 @@ Content-Type: application/json
       "initialPosition": "FIRST"
     },
     "targetDataset": {
-      "publishMetadata": false
+      "publishMetadata": true
     },
     "targetStorage": {
       "path": "/kilde/altinn/3/test/ra0678m/4664/45918/20201119",
-      "version": 1604071012000
+      "version": 1604071015000
     }
   },
   "converterConfig": {
@@ -75,11 +75,11 @@ Content-Type: application/json
       "initialPosition": "FIRST"
     },
     "targetDataset": {
-      "publishMetadata": false
+      "publishMetadata": true
     },
     "targetStorage": {
       "path": "/kilde/altinn/3/test/ra0800/3983/40674/20201119",
-      "version": 1604071013000
+      "version": 1604071014000
     }
   },
   "converterConfig": {
