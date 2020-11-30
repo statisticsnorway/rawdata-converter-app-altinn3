@@ -2,7 +2,6 @@ package no.ssb.rawdata.converter.app.altinn3;
 
 import io.micronaut.context.annotation.ConfigurationProperties;
 import lombok.Data;
-import lombok.NonNull;
 import no.ssb.rawdata.converter.app.altinn3.schema.SchemaProperties;
 
 @ConfigurationProperties("rawdata.converter.altinn3")

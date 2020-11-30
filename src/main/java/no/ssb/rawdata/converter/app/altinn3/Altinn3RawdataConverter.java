@@ -1,7 +1,5 @@
 package no.ssb.rawdata.converter.app.altinn3;
 
-import avro.shaded.com.google.common.base.Objects;
-import com.google.common.base.MoreObjects;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import no.ssb.avro.convert.xml.XmlToRecords;

@@ -1,7 +1,6 @@
 package no.ssb.rawdata.converter.app.altinn3.schema;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.NonNull;
 import lombok.Value;
 import no.ssb.rawdata.converter.util.AvroSchemaUtil;
