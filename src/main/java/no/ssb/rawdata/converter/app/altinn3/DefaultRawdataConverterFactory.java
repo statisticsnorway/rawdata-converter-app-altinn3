@@ -21,14 +21,14 @@ public class DefaultRawdataConverterFactory implements RawdataConverterFactory {
     private final Altinn3RawdataConverterConfig defaultRawdataConverterConfig;
 
     @Override
-    public RawdataConverter newRawdataConverter(ConverterJobConfig jobConfig, String converterConfigJson) {
+    public RawdataConverter newRawdataConverter(ConverterJobConfig jobConfig) {
         Altinn3RawdataConverterConfig converterConfig = defaultRawdataConverterConfig;
-        if (converterConfigJson != null) {
+        if (! jobConfig.getAppConfig().isEmpty()) {
             try {
-                converterConfig = Json.toObject(Altinn3RawdataConverterConfig.class, converterConfigJson);
+                converterConfig = Json.toObject(Altinn3RawdataConverterConfig.class, jobConfig.appConfigJson());
             }
             catch (Exception e) {
-                throw new RawdataConverterException("Invalid Altinn3RawdataConverterConfig params: " + converterConfigJson, e);
+                throw new RawdataConverterException("Invalid Altinn3RawdataConverterConfig params: " + jobConfig.appConfigJson(), e);
             }
         }
 
