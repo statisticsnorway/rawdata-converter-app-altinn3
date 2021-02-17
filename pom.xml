@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>rawdata-converter-app-altinn3</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <name>Rawdata Converter App - Altinn3</name>
 
     <properties>
@@ -21,7 +21,7 @@
         <connection>scm:git:git://github.com/statisticsnorway/rawdata-converter-app-altinn3.git</connection>
         <developerConnection>scm:git:git@github.com:statisticsnorway/rawdata-converter-app-altinn3.git</developerConnection>
         <url>https://github.com/statisticsnorway/rawdata-converter-app-altinn3</url>
-        <tag>HEAD</tag>
+        <tag>0.1.0</tag>
     </scm>
 
     <dependencies>
